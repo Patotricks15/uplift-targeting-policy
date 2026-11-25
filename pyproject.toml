@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uplift-targeting-policy"
+version = "0.1.0"
+description = "Uplift targeting policy with Qini curve and cost-aware cutoff (UP03) on a randomized Criteo uplift dataset."
+requires-python = ">=3.11"
+dependencies = [
+    "pandas==3.1.1",
+    "numpy==2.5.4",
+    "scikit-learn==1.9.1",
+    "matplotlib==3.11.2",
+    "seaborn==0.13.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
